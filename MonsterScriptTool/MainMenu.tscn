@@ -1,0 +1,171 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://tools/MonsterScriptTool/MonsterScriptGenerator.gd" type="Script" id=1]
+[ext_resource path="res://ui/fonts/regular/regular_40.tres" type="DynamicFont" id=2]
+[ext_resource path="res://ui/battle_theme.tres" type="Theme" id=3]
+[ext_resource path="res://ui/fonts/regular/regular_40_bold.tres" type="DynamicFont" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.760784, 0.760784, 0.760784, 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="Menu" type="VBoxContainer" parent="Panel"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Row5" type="HBoxContainer" parent="Panel/Menu"]
+margin_right = 1109.0
+margin_bottom = 60.0
+custom_constants/separation = 20
+
+[node name="Label" type="Label" parent="Panel/Menu/Row5"]
+margin_right = 373.0
+margin_bottom = 60.0
+theme = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.788235, 0.788235, 0.788235, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Mod Folder Path (Required):"
+
+[node name="mod_folder_path" type="LineEdit" parent="Panel/Menu/Row5"]
+margin_left = 393.0
+margin_right = 525.0
+margin_bottom = 60.0
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 2 )
+expand_to_text_length = true
+
+[node name="Row6" type="HBoxContainer" parent="Panel/Menu"]
+margin_top = 64.0
+margin_right = 1109.0
+margin_bottom = 124.0
+custom_constants/separation = 20
+
+[node name="Label" type="Label" parent="Panel/Menu/Row6"]
+margin_right = 200.0
+margin_bottom = 60.0
+theme = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.788235, 0.788235, 0.788235, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Monster Name:"
+
+[node name="monster_name" type="LineEdit" parent="Panel/Menu/Row6"]
+margin_left = 220.0
+margin_right = 352.0
+margin_bottom = 60.0
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 2 )
+expand_to_text_length = true
+
+[node name="Row1" type="HBoxContainer" parent="Panel/Menu"]
+margin_top = 128.0
+margin_right = 1109.0
+margin_bottom = 188.0
+custom_constants/separation = 20
+
+[node name="Label" type="Label" parent="Panel/Menu/Row1"]
+margin_right = 559.0
+margin_bottom = 60.0
+theme = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.788235, 0.788235, 0.788235, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Monster Configuration Filepath (Required):"
+
+[node name="monster_filepath" type="LineEdit" parent="Panel/Menu/Row1"]
+margin_left = 579.0
+margin_right = 711.0
+margin_bottom = 60.0
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 2 )
+expand_to_text_length = true
+
+[node name="Row2" type="HBoxContainer" parent="Panel/Menu"]
+margin_top = 192.0
+margin_right = 1109.0
+margin_bottom = 252.0
+custom_constants/separation = 20
+
+[node name="Label" type="Label" parent="Panel/Menu/Row2"]
+margin_right = 469.0
+margin_bottom = 60.0
+theme = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.788235, 0.788235, 0.788235, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Monster Spawn Location (Required)"
+
+[node name="spawn_location" type="OptionButton" parent="Panel/Menu/Row2"]
+margin_left = 489.0
+margin_right = 517.0
+margin_bottom = 60.0
+theme = ExtResource( 3 )
+expand_icon = true
+
+[node name="Row4" type="HBoxContainer" parent="Panel/Menu"]
+margin_top = 256.0
+margin_right = 1109.0
+margin_bottom = 316.0
+custom_constants/separation = 20
+
+[node name="Label" type="Label" parent="Panel/Menu/Row4"]
+margin_right = 934.0
+margin_bottom = 60.0
+theme = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.788235, 0.788235, 0.788235, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Monster World Sprite Filepath (Leave blank if not using world sprites):"
+
+[node name="world_sprite_path" type="LineEdit" parent="Panel/Menu/Row4"]
+margin_left = 954.0
+margin_right = 1086.0
+margin_bottom = 60.0
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 2 )
+expand_to_text_length = true
+
+[node name="Row3" type="HBoxContainer" parent="Panel/Menu"]
+margin_top = 320.0
+margin_right = 1109.0
+margin_bottom = 380.0
+custom_constants/separation = 20
+
+[node name="Label" type="Label" parent="Panel/Menu/Row3"]
+margin_right = 957.0
+margin_bottom = 60.0
+theme = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.788235, 0.788235, 0.788235, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Translation Filepath (Leave blank if not using custom translation strings)"
+
+[node name="translation_strings" type="LineEdit" parent="Panel/Menu/Row3"]
+margin_left = 977.0
+margin_right = 1109.0
+margin_bottom = 60.0
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 2 )
+expand_to_text_length = true
+
+[node name="Generate" type="Button" parent="Panel/Menu"]
+margin_top = 384.0
+margin_right = 1109.0
+margin_bottom = 442.0
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 2 )
+text = "Generate Scripts"
+
+[connection signal="pressed" from="Panel/Menu/Generate" to="." method="on_generate_button_pressed"]
