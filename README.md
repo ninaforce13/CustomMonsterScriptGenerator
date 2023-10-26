@@ -9,7 +9,7 @@ This tool helps generate the scripts needed to create a custom monster mod for C
 * Download the files from this repository and place them inside the tools folder of your project. They should be located in ```res://tools/MonsterScriptTool/```.
 
 # How to use
-* Open the MainMenu.tscn scene in your godot editor then click Play Scene(F6).
+* Navigate to the project's tool's folder and open the MainMenu.tscn scene in your godot editor then click Play Scene(F6).
 * Enter the requested information in the pop up window and press Generate. The tool allows for up to 3 monster forms to be included in the mod at a time (will be updated later to allow for a less restrictive quantity) 
 
 https://github.com/ninaforce13/CustomMonsterScriptGenerator/assets/68625676/2c18e9c1-f57d-4b68-aee3-3f207be7a5bb
