@@ -334,9 +334,9 @@ func generate_mod_file():
 	
 	if translation_strings.text == "":
 		translation_server_code = """#No translation strings being used"""
-	var world_sprite1 = "preload(\""+ world_sprite_path.text+"\")" if world_sprite_path.text != "" else ""
-	var world_sprite2 = "preload(\""+ world_sprite_path2.text+"\")" if world_sprite_path2.text != "" else ""
-	var world_sprite3 = "preload(\""+ world_sprite_path3.text+"\")" if world_sprite_path3.text != "" else ""
+	var world_sprite1 = "preload(\""+ world_sprite_path.text+"\")" if world_sprite_path.text != "" else "\"\""
+	var world_sprite2 = "preload(\""+ world_sprite_path2.text+"\")" if world_sprite_path2.text != "" else "\"\""
+	var world_sprite3 = "preload(\""+ world_sprite_path3.text+"\")" if world_sprite_path3.text != "" else "\"\""
 	var load_spawn_config_call = "load_spawn_config(preload(\"%s\"),preload(\"%s\"),%s)" % [spawn_location_path, monsterfile_path.text, world_sprite1]
 	var load_spawn_config_call2 = "load_spawn_config(preload(\"%s\"),preload(\"%s\"),%s)" % [spawn_location_path2, monsterfile_path2.text, world_sprite2]
 	var load_spawn_config_call3 = "load_spawn_config(preload(\"%s\"),preload(\"%s\"),%s)" % [spawn_location_path3, monsterfile_path3.text, world_sprite3]
